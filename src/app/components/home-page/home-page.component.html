@@ -1,20 +1,54 @@
-<div class="main">
-    <section class="part1">
-        <div class="row">
-            <div class="col-6 mt-5">
-                <h5>Confused about which laptop to purchase?</h5>
-                <h4>We got you covered</h4>
-                <h6 class="mt-4">Select your dream laptop from a collection of fine hand-picked laptops from our experts
-                    with customized recommendations.</h6>
-                <button class="btn btn-dark mt-4 btn-lg px-5" [routerLink]="['/products']">SHOP NOW</button>
+<div class="body">
+    <div class="main">
+        <section class="part1">
+            <div class="row">
+                <div class="col-6 mt-5 about">
+                    <h5>Confused about which laptop to purchase?</h5>
+                    <h4>We got you covered</h4>
+                    <h6 class="mt-4">Select your dream laptop from a collection of fine hand-picked laptops from our
+                        experts
+                        with customized recommendations.</h6>
+                    <button class="btn btn-dark mt-4 btn-lg px-5" [routerLink]="['/products']">SHOP NOW</button>
+                </div>
+                <div class="col-6 mt-5">
+                    <nz-carousel [nzEffect]="'fade'" nzAutoPlay>
+                        <div nz-carousel-content *ngFor="let item of array;">
+                            <img src="{{item}}" alt="">
+                        </div>
+                    </nz-carousel>
+                </div>
             </div>
-            <div class="col-6 mt-5">
-                <nz-carousel [nzEffect]="'fade'" nzAutoPlay>
-                    <div nz-carousel-content *ngFor="let item of array;">
-                        <img src="{{item}}" alt="">
+        </section>
+        <section class="part2">
+            <div class="popular-products mt-5">
+                <div class="title">
+                    <h1 style="text-align: center;">Popular Products</h1>
+                </div>
+                <div class="row products mt-5">
+                    <div class="col-4" *ngFor="let item of popularProductsImagesArray">
+                        <nz-card nzHoverable style="width:260px" [nzCover]="coverTemplate">
+                            <ng-template #coverTemplate>
+                                <img alt="example" src="{{item.image}}" style="height:200px" />
+                            </ng-template>
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <!-- Add your icon(s) here -->
+                                    <h6>{{item.laptopTitle}}</h6>
+                                    <p style="font-weight: bold;color: #003E7D;">&#8377;{{item.price}}</p>
+                                </div>
+                                <div class="card-description">
+                                    <hr style="border: none;border-top: 3px solid #003E7D;">
+                                    <!-- Add your long description here -->
+                                    <p style="font-weight: bold;color: #003E7D;">{{item.ram}}</p>
+                                    <p style="font-weight: bold;color: #003E7D;">{{item.storage}}</p>
+                                    <p style="font-weight: bold;color: #003E7D;">{{item.size}}</p>
+                                </div>
+                            </div>
+                            <nz-card-meta nzTitle="" nzDescription=""></nz-card-meta>
+                        </nz-card>
                     </div>
-                </nz-carousel>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </div>

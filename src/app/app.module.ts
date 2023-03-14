@@ -16,6 +16,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { ProductsPageComponent } from './components/products-page/products-page.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { NzCardModule } from 'ng-zorro-antd/card';
 
 registerLocaleData(en);
 
@@ -34,7 +35,8 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NzCarouselModule
+    NzCarouselModule,
+    NzCardModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

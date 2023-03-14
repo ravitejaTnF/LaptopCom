@@ -1,10 +1,14 @@
 .main {
-    min-height: 90vh;
     margin-top: 100px;
     margin-left: 200px;
     margin-right: 200px;
     margin-bottom: 100px;
     border-color: 1px solid black;
+}
+.body{
+    background-color: #f1f5f8;
+    min-height: 90vh;
+    overflow: hidden;
 }
 
 h5 {
@@ -41,7 +45,7 @@ h3 {
 }
 
 img {
-    height: 300px;
+    height: 350px;
     width: 100%;
     object-fit: fill;
 }
@@ -52,4 +56,42 @@ img {
 [nz-carousel] img{
     width: 100%;
 } */
+
+.part1 .row div{
+    height: 350px;
+}
+.about{
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+h1{
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    height: 400px;
+    width: 250px;
+    margin: 12px;
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+}
+.card .image-card img{
+    object-fit: fill;
+    height: 200px;
+    width:240px;
+}
+.image-card{
+    height: 200px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+.products{
+    margin: 0px 100px 0px 100px;
+    justify-content: center;
+    align-items: center;
+}
+.card-icon h6{
+    color: #003E7D;
+}
 
