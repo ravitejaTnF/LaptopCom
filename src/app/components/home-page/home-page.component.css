@@ -2,10 +2,10 @@
     margin-top: 100px;
     margin-left: 200px;
     margin-right: 200px;
-    margin-bottom: 100px;
     border-color: 1px solid black;
 }
-.body{
+
+.body {
     background-color: #f1f5f8;
     min-height: 90vh;
     overflow: hidden;
@@ -22,7 +22,7 @@ h4 {
 
 h6 {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 button {
@@ -57,41 +57,92 @@ img {
     width: 100%;
 } */
 
-.part1 .row div{
+.part1 .row div {
     height: 350px;
 }
-.about{
+
+.about {
     justify-content: center;
     align-items: center;
     padding: 24px;
 }
-h1{
+
+h1 {
     justify-content: center;
     align-items: center;
 }
-.card{
+
+.card {
     height: 400px;
     width: 250px;
     margin: 12px;
-    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.card .image-card img{
+
+.card .image-card img {
     object-fit: fill;
     height: 200px;
-    width:240px;
+    width: 240px;
 }
-.image-card{
+
+.image-card {
     height: 200px;
     width: 200px;
     justify-content: center;
     align-items: center;
 }
-.products{
+
+.products {
     margin: 0px 100px 0px 100px;
     justify-content: center;
     align-items: center;
 }
-.card-icon h6{
+
+.card-icon h6 {
     color: #003E7D;
 }
 
+.all-products-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.part-3 {
+    margin: 150px 0px 0px 0px;
+}
+
+.card-part3 {
+    height: 220px;
+    width: 350px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.part-4 {
+    margin-top: 100px;
+}
+
+.hr-line{
+    width: 150px;
+    height: 5px;
+    background-color: black;
+}
+.hr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

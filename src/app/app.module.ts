@@ -17,6 +17,7 @@ import { ProductsPageComponent } from './components/products-page/products-page.
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 registerLocaleData(en);
 
