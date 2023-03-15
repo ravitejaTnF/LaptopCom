@@ -2,7 +2,7 @@
     <div class="main">
         <section class="part1">
             <div class="row">
-                <div class="col-6 mt-5 about">
+                <div class="col-lg-6 col-md-6 mt-5 about">
                     <h5>Confused about which laptop to purchase?</h5>
                     <h4>We got you covered</h4>
                     <h6 class="mt-4">Select your dream laptop from a collection of fine hand-picked laptops from our
@@ -10,7 +10,7 @@
                         with customized recommendations.</h6>
                     <button class="btn btn-dark mt-4 btn-lg px-5" [routerLink]="['/products']">SHOP NOW</button>
                 </div>
-                <div class="col-6 mt-5">
+                <div class="col-lg-6 col-md-6 mt-5">
                     <nz-carousel [nzEffect]="'fade'" nzAutoPlay>
                         <div nz-carousel-content *ngFor="let item of imagesArrayForCarousel;">
                             <img src="{{item}}" alt="">
@@ -28,9 +28,9 @@
                     <div class="hr-line"></div>
                 </div>
                 <div class="row products mt-5">
-                    <div class="col-4" *ngFor="let item of popularProductsImagesArray">
+                    <div class="col-lg-4 col-md-4 product-card" *ngFor="let item of popularProductsImagesArray">
                         <a href="{{item.link}}" target="_blank">
-                            <nz-card nzHoverable style="width:260px" [nzCover]="coverTemplate">
+                            <nz-card nzHoverable [nzCover]="coverTemplate">
                                 <ng-template #coverTemplate>
                                     <img alt="example" src="{{item.image}}" style="height:200px" />
                                 </ng-template>
@@ -59,17 +59,17 @@
             </div>
         </section>
         <section class="part-3">
-            <div class="row">
-                <div class="col-6">
-                    <h4 style="font-weight: 300px;font-size: 34px;color:#102A42">Unique items<br>
+            <div class="row unique-items">
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="unique-items-title">Unique items<br>
                         picked only For You</h4>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-md-6">
                     <h4 style="font-size: 20px;color: #003E7D;">We picked them as we are buying one for ourself.</h4>
                 </div>
             </div>
             <div class="row mission-cards mt-5">
-                <div class="col-4 card-part3">
+                <div class="col-lg-4 col-md-6 card-part3">
                     <div>
                         <i class="fa-solid fa-rocket fa-2x" style="color: #003E7D;"></i>
                     </div>
@@ -80,7 +80,7 @@
                         <p style="font-size: 14px;color: #003E7D;font-weight: 500;">To make laptop selection easier for students who lacks much knowledge about laptops</p>
                     </div>
                 </div>
-                <div class="col-4 card-part3">
+                <div class="col-lg-4 col-md-6 card-part3">
                     <div>
                         <i class="fa-solid fa-head-side-virus fa-2x" style="color: #003E7D;"></i>
                     </div>
@@ -91,7 +91,7 @@
                         <p style="font-size: 14px;color: #003E7D;font-weight: 500;">To reduce hours of effort in selecting the suaitable lappy for your needs</p>
                     </div>
                 </div>
-                <div class="col-4 card-part3">
+                <div class="col-lg-4 col-md-6 card-part3">
                     <div>
                         <i class="fa-solid fa-clock-rotate-left fa-2x" style="color: #003E7D;"></i>
                     </div>
@@ -106,11 +106,10 @@
         </section>
         <section class="part-4">
             <div class="promotions row">
-                <div class="col-6">
-                    <h4 style="font-weight: 500;font-size: 2.125rem;color: blue;">Join our instagram community.</h4>
+                <div class="col-12">
+                    <h4 class="join-our-community">Join our instagram community.</h4>
                     <p style="color: #003E7D;font-weight: 350;font-size: 20px;">And enjoy programming content through memes for FREE!!!</p>
                 </div>
-                <div class="col-6"></div>
             </div>
         </section>
     </div>

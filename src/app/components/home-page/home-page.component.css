@@ -78,6 +78,9 @@ h1 {
     margin: 12px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+nz-card{
+    width: 240px;
+}
 
 .card .image-card img {
     object-fit: fill;
@@ -93,13 +96,19 @@ h1 {
 }
 
 .products {
-    margin: 0px 100px 0px 100px;
+    margin: 0px 30px 0px 30px;
     justify-content: center;
     align-items: center;
 }
 
 .card-icon h6 {
     color: #003E7D;
+}
+
+.unique-items-title{
+    font-weight: 500;
+    font-size: 34px;
+    color:#102A42
 }
 
 .all-products-btn {
@@ -110,12 +119,12 @@ h1 {
 }
 
 .part-3 {
-    margin: 150px 0px 0px 0px;
+    margin: 100px 0px 0px 0px;
 }
 
 .card-part3 {
     height: 220px;
-    width: 350px;
+    width: 300px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 4px;
@@ -123,6 +132,16 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: transform 0.1s ease;
+}
+.card-part3:hover{
+    transform: scale(0.98);
+}
+.product-card{
+    transition: transform 0.2s ease;
+}
+.product-card:hover{
+    transform: scale(1.01);
 }
 
 .mission-cards {
@@ -145,4 +164,65 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/* styles for bottom text */
+.join-our-community{
+    font-weight: 500;
+    font-size: 2.125rem;
+    color: blue;
+}
+
+@media screen and (max-width: 767px) {
+    .main{
+        margin: 16px;
+    }
+    .products{
+        margin:12px;
+    }
+    nz-card{
+        width: 100%;
+        margin-top: 16px;
+    }
+    .card-part3{
+        margin-top: 16px;
+    }
+    .part-3{
+        margin-top: 24px;
+    }
+    .unique-items,.promotions{
+        margin-top: 8px;
+        margin: 12px;
+    }
+    .join-our-community{
+        font-size: 1.5rem;
+    }
+    .unique-items-title{
+        font-weight: 400;
+        font-size: 28px;
+        color:#102A42
+    }
+    .hr-line{
+        width:100px;
+        height:3px;
+    }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+    .main{
+        margin: 30px;
+    }
+    .products{
+        margin: 12px;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-part3{
+        width: 300px;
+        height: 220px;
+        margin-top: 24px;
+    }
+    .part3{
+        margin-top: 18px;
+    }
 }
