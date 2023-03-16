@@ -1,0 +1,36 @@
+.body {
+  background-color: #f1f5f8;
+  min-height: 90vh;
+  overflow: hidden;
+}
+
+.main {
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+  border-color: 1px solid black;
+}
+
+.example-form-field {
+  border: none;
+}
+
+.example-form-field .mat-form-field-label {
+  position: absolute;
+  top: -12px;
+  font-size: 12px;
+  color: #999;
+  transition: all 0.2s ease-in-out;
+}
+
+.example-form-field.focused .mat-form-field-label {
+  top: -24px;
+  font-size: 10px;
+  color: #666;
+}
+
+.mat-slider-horizontal {
+  width: 200px;
+}
+
+

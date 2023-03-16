@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./products-page.component.css']
 })
 export class ProductsPageComponent {
+  laptopTypes = ['All','Normal','Gaming'];
+  laptopTypeSelected = 'All';
+  sliderValue = 185000;
+  searchText = '';
+  totalProducts:number = 0;
 
+  clearFilters(){
+    this.sliderValue = 185000;
+    this.laptopTypeSelected = 'All';
+    this.searchText = '';
+  }
 }

@@ -1,1 +1,39 @@
-<p>products-page works!</p>
+<div class="body">
+    <div class="main">
+        <div class="breadcrumb">
+            <h2>Home > <span style="color: #003E7D;">Products</span></h2>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <mat-form-field class="example-form-field">
+                    <input matInput placeholder="Search" [(ngModel)]="searchText">
+                </mat-form-field>
+                <h3 class="mt-1" style="font-weight: 500;">Category</h3>
+                <mat-form-field appearance="fill">
+                    <mat-select [(ngModel)]="laptopTypeSelected">
+                        <mat-option *ngFor="let food of laptopTypes" [value]="food">
+                            {{food}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <h3 class="mt-1" style="font-weight: 500;">Price</h3>
+                <p class="mt-2" style="color:#003E7D;font-size: 16px;">&#8377; {{sliderValue}}</p>
+                <mat-slider min="30000" max="185000" step="1000" class="mat-slider-horizontal">
+                    <input matSliderThumb [(ngModel)]="sliderValue">
+                </mat-slider>
+                <mat-form-field class="example-form-field">
+                    <input matInput placeholder="" type="number" min="30000" max="185000" step="1000" [value]="sliderValue" style="color:#003E7D" [(ngModel)]="sliderValue">
+                </mat-form-field>
+                <button class="btn btn-dark btn-lg px-4" (click)="clearFilters()">CLEAR FILTERS</button>
+            </div>
+            <div class="col-9">
+                <div class="col">
+                    <h3 style="font-weight: 500;color:red;font-size: 18px;">Disclaimer : Prices mentioned here are based on 13 DEC 2022 prices. These may vary in future.</h3>
+                </div>
+                <div class="header">
+                    <i class="fa-solid fa-border-all fa-2x"></i>&nbsp;{{totalProducts}} Products found
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
