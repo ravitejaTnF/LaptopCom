@@ -18,6 +18,11 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import { MatSliderModule} from '@angular/material/slider';
 
 registerLocaleData(en);
 
@@ -37,7 +42,12 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NzCarouselModule,
-    NzCardModule
+    NzCardModule,
+    NzInputModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatSliderModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
