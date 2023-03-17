@@ -6,11 +6,12 @@
         <div class="row">
             <div class="col-3">
                 <mat-form-field class="example-form-field">
-                    <input matInput placeholder="Search" [(ngModel)]="searchText">
+                    <input matInput placeholder="Search" [(ngModel)]="searchText"
+                        (ngModelChange)="filterBasedOnSearchText()">
                 </mat-form-field>
                 <h3 class="mt-1" style="font-weight: 500;">Category</h3>
                 <mat-form-field appearance="fill">
-                    <mat-select [(ngModel)]="laptopTypeSelected">
+                    <mat-select [(ngModel)]="laptopTypeSelected" (ngModelChange)="filterBasedOnDropdown()">
                         <mat-option *ngFor="let food of laptopTypes" [value]="food">
                             {{food}}
                         </mat-option>
@@ -19,19 +20,48 @@
                 <h3 class="mt-1" style="font-weight: 500;">Price</h3>
                 <p class="mt-2" style="color:#003E7D;font-size: 16px;">&#8377; {{sliderValue}}</p>
                 <mat-slider min="30000" max="185000" step="1000" class="mat-slider-horizontal">
-                    <input matSliderThumb [(ngModel)]="sliderValue">
+                    <input matSliderThumb [(ngModel)]="sliderValue" (ngModelChange)="filterBasedOnSliderValue()">
                 </mat-slider>
                 <mat-form-field class="example-form-field">
-                    <input matInput placeholder="" type="number" min="30000" max="185000" step="1000" [value]="sliderValue" style="color:#003E7D" [(ngModel)]="sliderValue">
+                    <input matInput placeholder="" type="number" min="30000" max="185000" step="1000"
+                        [value]="sliderValue" style="color:#003E7D" [(ngModel)]="sliderValue"
+                        (ngModelChange)="filterBasedOnSliderValue()">
                 </mat-form-field>
                 <button class="btn btn-dark btn-lg px-4" (click)="clearFilters()">CLEAR FILTERS</button>
             </div>
             <div class="col-9">
                 <div class="col">
-                    <h3 style="font-weight: 500;color:red;font-size: 18px;">Disclaimer : Prices mentioned here are based on 13 DEC 2022 prices. These may vary in future.</h3>
+                    <h3 style="font-weight: 500;color:red;font-size: 18px;">Disclaimer : Prices mentioned here are based
+                        on 13 DEC 2022 prices. These may vary in future.</h3>
                 </div>
                 <div class="header">
                     <i class="fa-solid fa-border-all fa-2x"></i>&nbsp;{{totalProducts}} Products found
+                </div>
+                <div class="row products mt-5">
+                    <div class="col-lg-4 col-md-4 product-card" *ngFor="let item of filteredLaptopsData">
+                        <a href="{{item.link}}" target="_blank">
+                            <nz-card nzHoverable [nzCover]="coverTemplate">
+                                <ng-template #coverTemplate>
+                                    <img alt="example" src="{{item.image}}" style="height:200px" />
+                                </ng-template>
+                                <div class="card-content">
+                                    <div class="card-icon">
+                                        <!-- Add your icon(s) here -->
+                                        <h6>{{item.laptopTitle}}</h6>
+                                        <p style="font-weight: bold;color: #003E7D;">&#8377;{{item.price}}</p>
+                                    </div>
+                                    <div class="card-description">
+                                        <hr style="border: none;border-top: 3px solid #003E7D;">
+                                        <!-- Add your long description here -->
+                                        <p style="font-weight: bold;color: #003E7D;">{{item.ram}}</p>
+                                        <p style="font-weight: bold;color: #003E7D;">{{item.storage}}</p>
+                                        <p style="font-weight: bold;color: #003E7D;">{{item.size}}</p>
+                                    </div>
+                                </div>
+                                <nz-card-meta nzTitle="" nzDescription=""></nz-card-meta>
+                            </nz-card>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
