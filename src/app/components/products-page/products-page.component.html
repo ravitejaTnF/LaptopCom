@@ -4,7 +4,7 @@
             <h2>Home > <span style="color: #003E7D;">Products</span></h2>
         </div>
         <div class="row">
-            <div class="col-3">
+            <div class="col-lg-3">
                 <mat-form-field class="example-form-field">
                     <input matInput placeholder="Search" [(ngModel)]="searchText"
                         (ngModelChange)="filterBasedOnSearchText()">
@@ -27,27 +27,29 @@
                         [value]="sliderValue" style="color:#003E7D" [(ngModel)]="sliderValue"
                         (ngModelChange)="filterBasedOnSliderValue()">
                 </mat-form-field>
-                <button class="btn btn-dark btn-lg px-4" (click)="clearFilters()">CLEAR FILTERS</button>
+                <div>
+                    <button class="btn btn-dark btn-lg px-4" (click)="clearFilters()">CLEAR FILTERS</button>
+                </div>
             </div>
-            <div class="col-9">
-                <div class="col">
+            <div class="col-lg-9 mt-4">
+                <div class="col-12">
                     <h3 style="font-weight: 500;color:red;font-size: 18px;">Disclaimer : Prices mentioned here are based
                         on 13 DEC 2022 prices. These may vary in future.</h3>
                 </div>
                 <div class="header">
-                    <i class="fa-solid fa-border-all fa-2x"></i>&nbsp;{{totalProducts}} Products found
+                    <i class="fa-solid fa-border-all fa-2x"></i>&nbsp;&nbsp;&nbsp;{{totalProducts}} Products found&nbsp;<div class="hr-line"></div>
                 </div>
                 <div class="row products mt-5">
                     <div class="col-lg-4 col-md-4 product-card" *ngFor="let item of filteredLaptopsData">
                         <a href="{{item.link}}" target="_blank">
                             <nz-card nzHoverable [nzCover]="coverTemplate">
                                 <ng-template #coverTemplate>
-                                    <img alt="example" src="{{item.image}}" style="height:200px" />
+                                    <img alt="example" src="{{item.image}}" style="height:200px" class="product-image" />
                                 </ng-template>
                                 <div class="card-content">
                                     <div class="card-icon">
                                         <!-- Add your icon(s) here -->
-                                        <h6>{{item.laptopTitle}}</h6>
+                                        <h6 class="laptop-title">{{item.laptopTitle}}</h6>
                                         <p style="font-weight: bold;color: #003E7D;">&#8377;{{item.price}}</p>
                                     </div>
                                     <div class="card-description">
