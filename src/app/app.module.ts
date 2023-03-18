@@ -23,6 +23,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { MatSliderModule} from '@angular/material/slider';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 
 registerLocaleData(en);
 
@@ -47,7 +48,8 @@ registerLocaleData(en);
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatSliderModule
+    MatSliderModule,
+    NzDropDownModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
